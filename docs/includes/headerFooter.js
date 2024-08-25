@@ -3,7 +3,7 @@ class specialHeader extends HTMLElement{
         this.innerHTML = `
         <div id="headerWrapperHome">
             <div class="hlogo">
-                <a href="/index.html"><img src="images/yeller.png" alt="Ur Mom logo"></a>
+                <a href="/urmomfinal/"><img src="images/yeller.png" alt="Ur Mom logo"></a>
             </div>
             <div class="navdesk">
                 <a href="About.html">About</a>
@@ -25,7 +25,7 @@ class specialHeader extends HTMLElement{
             </button>
             <div class="mob-nav">
                 <div class="mlogo">
-                    <a href="/"><img src="images/yeller.png" alt="Ur Mom logo"></a>
+                    <a href="/urmomfinal/"><img src="images/yeller.png" alt="Ur Mom logo"></a>
                 </div>
                 <div class="mnavdesk">
                     <a href="About.html">About</a>
