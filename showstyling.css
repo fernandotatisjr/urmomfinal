@@ -387,6 +387,7 @@ body.privacy-policy #bodyWrapper li:first-of-type{margin:0 0 20px;}
 #mc_embed_signup{background:transparent!important;}
 #mc_embed_signup .indicates-required,#mc_embed_signup .mc-field-group{color:#fff!important;}
 #mc-embedded-subscribe-form{padding:10px 20px;border:1px dashed #ee0cee;}
+.optionalParent p a{color:#000;}
 .homeNav{width:25%;display:flex;justify-content: center;}
 .homeNav img{width:150px;transition:0.3s;}
 .homeNav img:hover{transform:scale(1.1);}
