@@ -3,7 +3,7 @@ class specialHeader extends HTMLElement{
         this.innerHTML = `
         <div id="headerWrapperHome">
             <div class="hlogo">
-                <a href="/index.html"><img src="/images/yeller.png" alt="Ur Mom logo"></a>
+                <a href="/index.html"><img src="images/yeller.png" alt="Ur Mom logo"></a>
             </div>
             <div class="navdesk">
                 <a href="About.html">About</a>
@@ -25,7 +25,7 @@ class specialHeader extends HTMLElement{
             </button>
             <div class="mob-nav">
                 <div class="mlogo">
-                    <a href="/index.html"><img src="/images/yeller.png" alt="Ur Mom logo"></a>
+                    <a href="/index.html"><img src="images/yeller.png" alt="Ur Mom logo"></a>
                 </div>
                 <div class="mnavdesk">
                     <a href="About.html">About</a>
@@ -75,7 +75,7 @@ class specialFooter extends HTMLElement{
         <div class="optionalParent">
             <div class="clear foot">
                 <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/iXg-wU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/iXg-wU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_usimages/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@ class specialFooter extends HTMLElement{
                 <a href="https://www.tiktok.com/@urmomtheband" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" class="icon"><path fill-rule="evenodd" d="M11.281 0c.298 2.554 1.73 4.077 4.219 4.24v2.872c-1.442.14-2.706-.33-4.175-1.215v5.373c0 6.826-7.473 8.96-10.477 4.066-1.93-3.148-.748-8.672 5.444-8.894v3.03a8.99 8.99 0 00-1.437.35c-1.377.465-2.158 1.335-1.94 2.868.417 2.938 5.828 3.808 5.378-1.933V.005h2.988V0z"></path></svg></a>
             </div>
             <div class="homeNav">
-                <a href="/index.html"><img src="/images/logobasic.png" alt="Ur Mom Home Button" class="homeLogo"></a>
+                <a href="/index.html"><img src="images/logobasic.png" alt="Ur Mom Home Button" class="homeLogo"></a>
             </div>
         </div>
         
