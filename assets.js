@@ -1,1 +1,73 @@
-document.addEventListener("DOMContentLoaded",(function(){document.body.classList.add("fade-in")})),document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector(".hamburger"),t=document.querySelector(".mob-nav");e.addEventListener("click",(function(){e.classList.toggle("is-active"),t.classList.contains("is-active")?(t.classList.remove("is-active"),setTimeout((()=>{t.style.display="none"}),400)):(t.style.display="flex",setTimeout((()=>{t.classList.add("is-active")}),10)),e.classList.contains("is-active")?document.body.style.overflow="hidden":document.body.style.overflow="auto"})),window.addEventListener("resize",(()=>{window.innerWidth>950&&t.classList.contains("is-active")&&(t.classList.remove("is-active"),t.style.display="none",e.classList.remove("is-active"),document.body.style.overflow="auto")}))}));const body=document.body;let lastScroll=0;function updateElementsOnScroll(){const e=document.querySelectorAll(".scroll-element"),t=window.innerHeight,n=t/2;e.forEach((e=>{const s=e.getBoundingClientRect(),o=s.top+s.height/2;let i,c;if(o<=n)i=1,c=1;else if(s.top<t&&s.bottom>0){const e=Math.abs(n-o),s=t/2,d=Math.min(1,1-e/s);i=.8+.2*d,c=.5+.5*d}else i=.8,c=.5;e.style.transform=`scale(${i})`,e.style.opacity=c}))}window.addEventListener("scroll",(()=>{})),document.addEventListener("DOMContentLoaded",updateElementsOnScroll),document.addEventListener("scroll",updateElementsOnScroll);
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburgerBtn = document.querySelector('.hamburger');
+  const mobNav = document.querySelector('.mob-nav');
+  const mobileBreakpoint = 950;
+
+  const handleResize = () => {
+      if (window.innerWidth > mobileBreakpoint) {
+          if (mobNav.classList.contains('is-active')) {
+              mobNav.classList.remove('is-active');
+              mobNav.style.display = 'none';
+              hamburgerBtn.classList.remove('is-active');
+              document.body.style.overflow = 'auto';
+          }
+      }
+  };
+
+  hamburgerBtn.addEventListener('click', function () {
+      hamburgerBtn.classList.toggle('is-active');
+      if (mobNav.classList.contains('is-active')) {
+          mobNav.classList.remove('is-active');
+          setTimeout(() => {
+              mobNav.style.display = 'none';
+          }, 400);
+      } else {
+          mobNav.style.display = 'flex';
+          setTimeout(() => {
+              mobNav.classList.add('is-active');
+          }, 10);
+      }
+      if (hamburgerBtn.classList.contains('is-active')) {
+          document.body.style.overflow = 'hidden';
+      } else {
+          document.body.style.overflow = 'auto';
+      }
+  });
+
+  window.addEventListener('resize', handleResize);
+});
+const body = document.body;
+let lastScroll = 0;
+window.addEventListener('scroll', () =>{
+})
+function updateElementsOnScroll() {
+    const scrollElements = document.querySelectorAll('.scroll-element');
+    const windowHeight = window.innerHeight;
+    const viewportCenter = windowHeight / 2;
+  
+    scrollElements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect();
+      const elementCenter = elementPosition.top + (elementPosition.height / 2);
+      let scaleValue, opacityValue;
+  
+      if (elementCenter <= viewportCenter) {
+        scaleValue = 1;
+        opacityValue = 1;
+      } else if (elementPosition.top < windowHeight && elementPosition.bottom > 0) {
+        const distanceFromCenter = Math.abs(viewportCenter - elementCenter);
+        const maxDistance = windowHeight / 2;
+        const ratio = Math.min(1, 1 - (distanceFromCenter / maxDistance));
+        scaleValue = 0.8 + (0.2 * ratio);
+        opacityValue = 0.5 + (0.5 * ratio);
+      } else {
+        scaleValue = 0.8;
+        opacityValue = 0.5;
+      }
+  
+      element.style.transform = `scale(${scaleValue})`;
+      element.style.opacity = opacityValue;
+    });
+  }
+  document.addEventListener('DOMContentLoaded', updateElementsOnScroll);
+  document.addEventListener('scroll', updateElementsOnScroll);
+  
