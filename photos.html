@@ -39,7 +39,6 @@
                 <span onclick="closeFullImg()">&times;</span>
                 <div class="tur" id="photographerCredit">Photo by <a href="https://www.arthursiwek.com/" target="_blank">Arthur Siwek</a></div>
             </div>
-            
             <div class="img-gallery">
                 <img src="galimages/img-1.jpg" onclick="openFullImg(this.src, 0, this.className)" alt="Ur Mom Photo" class="arsi">
                 <img src="galimages/img-2.jpg" onclick="openFullImg(this.src, 1, this.className)" alt="Ur Mom Photo" class="arsi">
@@ -84,9 +83,6 @@
                 <img src="galimages/dripfest2.jpg" onclick="openFullImg(this.src, 30, this.className)" alt="Ur Mom at Drip Fest Photo 2" class="per8">
                 <img src="galimages/dripfest3.jpg" onclick="openFullImg(this.src, 41, this.className)" alt="Ur Mom at Drip Fest Photo 3" class="per8">
             </div>
-            <!--<div class="turmachine">
-                <p>Photos by <a href="https://www.arthursiwek.com/" target="_blank">Arthur Siwek</a></p>
-            </div>-->
         </div>
         <my-footer></my-footer>
     </div>
@@ -112,7 +108,6 @@
         }, 10);
         updatePhotographerCredit(className);
     }
-
     function closeFullImg() {
         fullImgBox.classList.remove("show");
         setTimeout(() => {
@@ -121,7 +116,6 @@
             headerWrapper.style.position = "unset";
         }, 500);
     }
-
     function navigateImage(direction) {
         currentIndex += direction;
         if (currentIndex < 0) {

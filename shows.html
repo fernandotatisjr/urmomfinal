@@ -319,10 +319,8 @@
 const upcoming = document.getElementById('ucs');
 const past = document.getElementById('ps');
 const head = document.getElementById('headerC');
-
 bbtn.addEventListener('click', function () {
     past.classList.toggle('show');
-
     if (past.classList.contains('show')) {
         upcoming.classList.remove('show');
         upcoming.style.display = 'none';

@@ -42,24 +42,12 @@
             <div id="soundCovers">
                 <div class="albCov singleArt">
                     <a href="ocd.html"><img src="images/OCD_FINAL_ARTWORK_2.jpg" alt="OCD Single Cover"></a>
-                    <div class="content">
-                        <!--<h3>Ur Mom</h3>
-                        <p>2023</p>-->
-                    </div>
                 </div>
                 <div class="albCov epArt">
                     <a href="ur-mom-ep.html"><img src="images/UrMomEPcoverFINAL.jpg" alt="Ur Mom EP Cover"></a>
-                    <div class="content">
-                        <!--<h3>Ur Mom</h3>
-                        <p>2023</p>-->
-                    </div>
                 </div>
                 <div class="albCov singleArt">
                     <a href="conquistador.html"><img src="images/conquistador.jpg" alt="Conquistador Cover"></a>
-                    <div class="content">
-                        <!--<h3>Ur Mom</h3>
-                        <p>2023</p>-->
-                    </div>
                 </div>
             </div>
         </div>
@@ -75,52 +63,20 @@
                 var allImages = document.querySelectorAll('.albCov');
                 var singleArtImages = document.querySelectorAll('.singleArt');
                 var epArtImages = document.querySelectorAll('.epArt');
-
-                singleArtImages.forEach(function(image) {
-                    image.style.display = 'none';
-                });
-
-                epArtImages.forEach(function(image) {
-                    image.style.display = 'none';
-                });
-
+                singleArtImages.forEach(function(image) {image.style.display = 'none';});
+                epArtImages.forEach(function(image) {image.style.display = 'none';});
                 if (selectedValue === 'single') {
-                    singleArtImages.forEach(function(image) {
-                        image.style.display = 'grid';
-                    });
+                    singleArtImages.forEach(function(image) {image.style.display = 'grid';});
                 } else if (selectedValue === 'ep') {
-                    epArtImages.forEach(function(image) {
-                        image.style.display = 'block';
-                    });
+                    epArtImages.forEach(function(image) {image.style.display = 'block';});
                 } else if (selectedValue === 'reset'){
-                    allImages.forEach(function(image) {
-                        image.style.display = 'grid';
-                    });
+                    allImages.forEach(function(image) {image.style.display = 'grid';});
                 }
             });
         });
     </script>
     <script>
-document.querySelectorAll('.albCov img').forEach(img => {
-    img.addEventListener('mousemove', (e) => {
-        const rect = img.getBoundingClientRect();
-        const x = e.clientX - rect.left; // X position within the element
-        const y = e.clientY - rect.top;  // Y position within the element
-        const width = rect.width;
-        const height = rect.height;
-        
-        // Calculate the rotation based on cursor position relative to the center of the image
-        const rotateX = ((y / height) - 0.5) * -50; // Inverted vertical tilt
-        const rotateY = (0.5 - (x / width)) * -50;  // Inverted horizontal tilt
-
-        // Apply the transformation with proportional tilting
-        img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    img.addEventListener('mouseleave', () => {
-        img.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    });
-});
+    document.querySelectorAll(".albCov img").forEach((e=>{e.addEventListener("mousemove",(t=>{const o=e.getBoundingClientRect(),n=t.clientX-o.left,r=t.clientY-o.top,a=o.width,d=-50*(r/o.height-.5),l=-50*(.5-n/a);e.style.transform=`rotateX(${d}deg) rotateY(${l}deg)`})),e.addEventListener("mouseleave",(()=>{e.style.transform="rotateX(0deg) rotateY(0deg)"}))}));
     </script>
     <script type="application/ld+json">
         {
