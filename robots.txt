@@ -1,0 +1,51 @@
+User-agent: *
+Disallow: /administrator/
+Disallow: /bin/
+Disallow: /cache/
+Disallow: /cli/
+Disallow: /includes/
+Disallow: /installation/
+Disallow: /language/
+Disallow: /layouts/
+Disallow: /libraries/
+Disallow: /log/
+Disallow: /logs/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /cdn-cgi/
+Disallow: /cgi-bin/
+Disallow: /cdn-bin/
+Disallow: /cdn/
+
+Allow: /images/
+Allow: /showstyling.css
+Allow: /assets.js
+Allow: /includes/headerFooter.js
+
+User-Agent: Googlebot
+
+Allow: /
+Allow: .css
+Allow: .js
+Allow: .jpeg
+Allow: .jpg
+Allow: .gif
+Allow: .bmp
+Allow: .png
+Allow: .tiff
+Allow: .pdf
+Allow: .svg
+
+User-Agent: AhrefsBot
+
+Allow: /
+Allow: .css
+Allow: .js
+Allow: .jpeg
+Allow: .jpg
+Allow: .gif
+Allow: .bmp
+Allow: .png
+Allow: .tiff
+Allow: .pdf
+Allow: .svg
