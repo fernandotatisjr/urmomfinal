@@ -65,13 +65,9 @@
                 var epArtImages = document.querySelectorAll('.epArt');
                 singleArtImages.forEach(function(image) {image.style.display = 'none';});
                 epArtImages.forEach(function(image) {image.style.display = 'none';});
-                if (selectedValue === 'single') {
-                    singleArtImages.forEach(function(image) {image.style.display = 'grid';});
-                } else if (selectedValue === 'ep') {
-                    epArtImages.forEach(function(image) {image.style.display = 'block';});
-                } else if (selectedValue === 'reset'){
-                    allImages.forEach(function(image) {image.style.display = 'grid';});
-                }
+                if (selectedValue === 'single') {singleArtImages.forEach(function(image) {image.style.display = 'grid';});} 
+                else if (selectedValue === 'ep') {epArtImages.forEach(function(image) {image.style.display = 'block';});}
+                else if (selectedValue === 'reset'){allImages.forEach(function(image) {image.style.display = 'grid';});}
             });
         });
     </script>

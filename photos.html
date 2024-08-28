@@ -98,31 +98,20 @@
     var images = document.querySelectorAll(".img-gallery img");
 
     function openFullImg(pic, index, className) {
-        fullImgBox.style.display = "flex";
-        headerWrapper.style.zIndex = "-1";
-        headerWrapper.style.position = "relative";
+        fullImgBox.style.display = "flex";headerWrapper.style.zIndex = "-1";headerWrapper.style.position = "relative";
         fullImg.src = pic;
         currentIndex = index;
-        setTimeout(() => {
-            fullImgBox.classList.add("show");
-        }, 10);
+        setTimeout(() => {fullImgBox.classList.add("show");}, 10);
         updatePhotographerCredit(className);
     }
     function closeFullImg() {
         fullImgBox.classList.remove("show");
-        setTimeout(() => {
-            fullImgBox.style.display = "none";
-            headerWrapper.style.zIndex = "9999";
-            headerWrapper.style.position = "unset";
-        }, 500);
+        setTimeout(() => {fullImgBox.style.display = "none";headerWrapper.style.zIndex = "9999";headerWrapper.style.position = "unset";}, 500);
     }
     function navigateImage(direction) {
         currentIndex += direction;
-        if (currentIndex < 0) {
-            currentIndex = images.length - 1;
-        } else if (currentIndex >= images.length) {
-            currentIndex = 0;
-        }
+        if (currentIndex < 0) {currentIndex = images.length - 1;} 
+        else if (currentIndex >= images.length) {currentIndex = 0;}
         fullImg.src = images[currentIndex].src;
         updatePhotographerCredit(images[currentIndex].className);
     }
