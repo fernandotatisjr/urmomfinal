@@ -458,7 +458,7 @@ body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapp
 #greetings,#greetings2{display:none;}
 .video-container{margin:50px auto 0;}
 .ytthumb{flex-direction:column;}
-.ytthumb:nth-of-type(1){margin:50px auto 0;}
+.ytthumb:nth-of-type(1){margin:50px auto 20px;}
 .yttext{margin:0 0 30px;}
 .yttext:nth-of-type(2){margin:30px 0 0;}
 .yttext img{width:200px;}
