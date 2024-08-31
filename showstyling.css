@@ -507,7 +507,7 @@ body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapp
 #hpnextShow h3{font-size:32px;}
 #hpdate p, #hpvenue h3, #hpvenue p{font-size:16px;text-align:center;}
 #hpvenue h3{font-size:28px;}
-#soundCovers{grid-template-columns:repeat(1, 1fr);}
+#soundCovers{grid-template-columns:repeat(1, 1fr);grid-gap:30px;}
 }
 @media(max-width:750px){
 .epHome, .covUman, #socialstream{gap:150px;}
@@ -531,7 +531,6 @@ body.privacy-policy #bodyWrapper{padding:50px 40px;}
 .cptou{width:40%;}
 .socialLink{width:60%}
 #hpnextShow{margin:50px 0 0;}
-.albCov{width:95%;}
 }
 @media (max-width:650px){
 #aboutHead h1{margin:0 auto -200px;}
