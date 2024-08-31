@@ -493,12 +493,12 @@ body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapp
 @media(max-width:700px){
 .epHome .uman{width:70%;padding:30px 45px;}
 .uman h1{font-size: 40px;}
-.epHome .cov{width:75%;max-width:none;margin:20px auto 0;}
+.epHome .cov{width:75%;max-width:none;margin:70px auto 0;}
 #greetings{margin:100px 0 50px;}
 #greetings::before,#greetings::after{height:0;}
 #greetings img,#greetings2 img{border-top:5px solid #fff;border-bottom:5px solid #fff;}
 #greetings2{margin:70px 0 90px;}
-#greetings2::before,#greetings2::after{height:0;}
+#greetings2::before,#greetings2::after{height:0;} 
 .imgc{width:500px;}
 .sslContainer ul li{padding:5% 10px;}
 body.privacy-policy #bodyWrapper{padding:50px 40px;}
