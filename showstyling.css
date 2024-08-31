@@ -507,6 +507,7 @@ body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapp
 #hpnextShow h3{font-size:32px;}
 #hpdate p, #hpvenue h3, #hpvenue p{font-size:16px;text-align:center;}
 #hpvenue h3{font-size:28px;}
+#soundCovers{grid-template-columns:repeat(1, 1fr);}
 }
 @media(max-width:750px){
 .epHome, .covUman, #socialstream{gap:150px;}
