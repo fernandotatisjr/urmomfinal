@@ -47,26 +47,7 @@ body.about #headerWrapperHome .navdesk a:nth-of-type(1),body.shows #headerWrappe
 #headerWrapperHome .socialLink{width:15%;justify-content:flex-end;gap:10px;}
 #headerWrapperHome .socialLink svg{height:25px;transition:0.3s;}
 #headerWrapperHome .socialLink svg:hover{rotate:360deg;fill:#ee0cee}
-:root {--shadow-color:rgba(238, 12, 238, 1);
---shadow-elevation-low:
-  0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.39),
-  0.5px 0.9px 1.1px -1.4px hsl(var(--shadow-color) / 0.35),
-  1.2px 2.1px 2.6px -2.9px hsl(var(--shadow-color) / 0.32);
---shadow-elevation-medium:
-  0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.41),
-  0.9px 1.6px 2px -1px hsl(var(--shadow-color) / 0.38),
-  2.4px 4.2px 5.2px -1.9px hsl(var(--shadow-color) / 0.35),
-  5.9px 10.5px 12.8px -2.9px hsl(var(--shadow-color) / 0.32);
---shadow-elevation-high:
-  0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.38),
-  1.5px 2.7px 3.3px -0.4px hsl(var(--shadow-color) / 0.36),
-  2.8px 5px 6.1px -0.8px hsl(var(--shadow-color) / 0.35),
-  4.8px 8.5px 10.4px -1.2px hsl(var(--shadow-color) / 0.34),
-  7.9px 14px 17.1px -1.7px hsl(var(--shadow-color) / 0.32),
-  12.7px 22.5px 27.5px -2.1px hsl(var(--shadow-color) / 0.31),
-  19.6px 34.7px 42.4px -2.5px hsl(var(--shadow-color) / 0.3),
-  29.2px 51.7px 63.2px -2.9px hsl(var(--shadow-color) / 0.29);
-}
+:root {--shadow-color:rgba(238, 12, 238, 1);--shadow-elevation-low:0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.39),0.5px 0.9px 1.1px -1.4px hsl(var(--shadow-color) / 0.35),1.2px 2.1px 2.6px -2.9px hsl(var(--shadow-color) / 0.32);--shadow-elevation-medium:0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.41),0.9px 1.6px 2px -1px hsl(var(--shadow-color) / 0.38),2.4px 4.2px 5.2px -1.9px hsl(var(--shadow-color) / 0.35),5.9px 10.5px 12.8px -2.9px hsl(var(--shadow-color) / 0.32);--shadow-elevation-high:0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.38),1.5px 2.7px 3.3px -0.4px hsl(var(--shadow-color) / 0.36),2.8px 5px 6.1px -0.8px hsl(var(--shadow-color) / 0.35),4.8px 8.5px 10.4px -1.2px hsl(var(--shadow-color) / 0.34),7.9px 14px 17.1px -1.7px hsl(var(--shadow-color) / 0.32),12.7px 22.5px 27.5px -2.1px hsl(var(--shadow-color) / 0.31),19.6px 34.7px 42.4px -2.5px hsl(var(--shadow-color) / 0.3),29.2px 51.7px 63.2px -2.9px hsl(var(--shadow-color) / 0.29);}
 body::-webkit-scrollbar{width:0.25rem;}
 body::-webkit-scrollbar-track{background:transparent;}
 body::-webkit-scrollbar-thumb{background:#ee0cee;}
@@ -111,16 +92,6 @@ body::-webkit-scrollbar-thumb{background:#ee0cee;}
 .uman .up{color:#000}
 .uman h1 a{font-style:italic;color:#ee0cee;}
 .uman h1 a:hover{color:#fc92ff;transition:250ms;}
-#socialstream{width:100%;display:flex;gap:200px;justify-content:center;animation:fade linear both;animation-timeline:view();animation-range:entry 50% cover 50%;}
-#hpsocial{width:30%;height:65px;display:flex;gap:30px;justify-content:center;align-items:center;}
-#hpsocial a{height:65px;border-radius:20px;}
-#hpsocial svg{height:65px;fill:#717171;transition:0.3s;}
-#hpsocial svg:hover{transform:scale(0.9);}
-.listen, .mlisten{width:40%;height:65px;animation:fade linear both;display:flex;align-items:center;justify-content:center;animation-timeline:view();animation-range:entry 50% cover 50%;background:#7827fb;}
-.mlisten{display:none;}
-.listen h3, .mlisten h3{color:#fff;font-size:46px;letter-spacing:2px;}
-.listen a, .mlisten a{color:#f0ea17;transition:0.3s;}
-.listen a:hover, .mlisten a:hover{color:#fff;}
 .video-container {width:100%;margin: 90px auto;display:flex;flex-direction:column;align-items:center;}
 .ytthumb{width:90%;margin:50px 0;display:flex;gap:15px;align-items:center;justify-content:center;transition:0.3s ease-in-out;animation:fade linear both;animation-timeline:view();animation-range:entry 50% cover 50%;}
 .ytthumb:hover{opacity:0.7;}
