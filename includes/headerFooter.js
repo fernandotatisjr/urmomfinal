@@ -59,7 +59,7 @@ class specialFooter extends HTMLElement{
                     <div><p>Name:</p> <input type="text" name="name" required></div>
                     <div><p>Email:</p> <input type="email" name="email" required></div>
                     <div><input type="checkbox" name="botcheck" class="hidden" style="display: none;"></div>
-                    <input type="hidden" name="redirect" value="https://urmomofficial.com/thank-you">
+                    <input type="hidden" name="redirect" value="https://weareurmom.com/thank-you">
                     <button type="submit">Submit Form</button>
                 </form>
             </div>
