@@ -597,7 +597,7 @@ h1{font-size:36px!important;}
 #nextPhoto{width:95%;}
 #mc_embed_signup{width:100%;}
 }
-@media(max-width:450px){
+@media(max-width:480px){
 #bodyWrapper{padding:50px 2%;}
 #headerWrapperHome .navdesk .mi,#headerWrapperHome .navdesk .vertLine{font-size:16px}
 .mob-nav img{width:130px;}
