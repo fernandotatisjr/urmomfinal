@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21BM2L53NQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-21BM2L53NQ');
+    </script>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Ur Mom</title>
+    <meta name="keywords" content="">
+    <meta name="title" content="Videos - Ur Mom">
+    <meta property="og:site_name" content="Videos - Ur Mom">
+    <meta property="og:title" content="Videos - Ur Mom">
+    <meta property="og:image" content="https://weareurmom.com/images/yeller.png">
+    <meta name="description" content="Find live concert footage, music videos, and more on the Ur Mom videos page.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" type="text/css" href="showstyling.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body class="videos">
+    <div id="siteWrapper">
+        <my-header></my-header>
+        <div id="bodyWrapper">
+            <h1>Videos</h1>
+            <div id="videoscontainer">
+                <div class="main"></div>
+                <div class="vidrow">
+                    <div class="vidi"><img src="images/fortuna_yt.jpg" alt="Fortuna Music Video Thumbnail" data-id="4Dg_GAXBHZ4?si=Cfxpl24LmlvHeglg"></div>
+                    <div class="vidi"><img src="images/ocd_yt2.jpg" alt="OCD Song Thumbnail" data-id="8_WeyPlzR6Y?si=v_ptlu_T0TZ4LiBG"></div>
+                    <div class="vidi"><img src="images/ocd_yt.jpg" alt="OCD Live at Subterranean Thumbnail" data-id="DGdtp9MJMxE?si=ntkorZxBWRk6doio"></div>
+                    <div class="vidi"><img src="images/sushi_yt.jpg" alt="Sushi Tiny Desk Thumbnail" data-id="mPCoL7t08FI?si=TswdfOl91gZZEqLj"></div>
+                    <div class="vidi"><img src="images/lavalamp_yt.jpg" alt="Lava Lamp at Beat Kitchen Thumbnail" data-id="zXtH0-VtTSg?si=YoDWk7mpOhNun7It"></div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <my-footer></my-footer>
+    <script src="includes/headerFooter.js"></script>
+    <script src="assets.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const mainContainer = document.querySelector('.main');
+            const images = document.querySelectorAll('.vidi img');
+            function updateVideo(videoId) {
+                mainContainer.innerHTML = `
+                    <iframe
+                        src="https://www.youtube.com/embed/${videoId}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                `;
+            }
+            function setActiveImage(img) {
+                images.forEach(image => image.classList.remove('active'));
+                img.classList.add('active');
+            }
+            const defaultVideoId = images[0].getAttribute('data-id').split('?')[0];
+            updateVideo(defaultVideoId);
+            setActiveImage(images[0]);
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    const videoId = img.getAttribute('data-id').split('?')[0];
+                    updateVideo(videoId);
+                    setActiveImage(img);
+                });
+            });
+        });
+        </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "MusicGroup",
+          "name": "Ur Mom",
+          "url": "https://weareurmom.com",
+          "logo": "https://weareurmom.com/images/yeller.png",
+          "sameAs": [
+            "https://www.facebook.com/weareurmom",
+            "https://www.instagram.com/weareurmom",
+            "https://www.youtube.com/@weareurmom"
+          ]
+        }
+        </script>
+</body>
+</html>
