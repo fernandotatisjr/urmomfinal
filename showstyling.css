@@ -430,7 +430,7 @@ body.sounds #bodyWrapper{padding:50px 5%;}
 .mob-nav {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100vh;background-color:#000;z-index: 9999;}
 .mob-nav.is-active {display:flex;flex-direction: column;align-items: center;overflow: hidden;height:100vh;}
 .mob-nav img{width:200px;}
-body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapperHome .mnavdesk a:nth-of-type(2),body.sounds #headerWrapperHome .mnavdesk a:nth-of-type(3),body.ep #headerWrapperHome .mnavdesk a:nth-of-type(3),body.news #headerWrapperHome .mnavdesk a:nth-of-type(4),body.photos #headerWrapperHome .mnavdesk a:nth-of-type(5){background:#ee0cee;color:#000;}
+body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapperHome .mnavdesk a:nth-of-type(2),body.sounds #headerWrapperHome .mnavdesk a:nth-of-type(3),body.ep #headerWrapperHome .mnavdesk a:nth-of-type(3),body.news #headerWrapperHome .mnavdesk a:nth-of-type(4),body.photos #headerWrapperHome .mnavdesk a:nth-of-type(5),body.photos #headerWrapperHome .mnavdesk a:nth-of-type(6){background:#ee0cee;color:#000;}
 .msocialLink{display:flex;flex-direction: row;margin:0;position:relative;bottom:-30px;}
 .msocialLink svg{height:30px;flex: 1;fill: #fff;transition: 0.2s;}
 .epHome, .covUman, #socialstream{padding:0;gap:110px;flex-direction:column;align-items:center;}
