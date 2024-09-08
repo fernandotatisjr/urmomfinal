@@ -285,7 +285,7 @@ body.photos #bodyWrapper li a:hover:before{transform: scaleX(1);}
 #nextPhoto{width:90%;margin-left:auto;margin-right:auto;position:absolute;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;}
 #nextPhoto svg{width:45px;height:45px;padding:12px;background:rgba(50,50,50,.5);fill:#fff;transition:200ms;border-radius:5px;}
 #nextPhoto svg:hover{cursor:pointer;background:rgba(50,50,50,.3);fill:#ee0cee;}
-.full-img img{max-width:800px;max-height:80%;border:2px solid #fff;user-select: none;-webkit-user-select: none;-ms-user-select: none;}
+.full-img img{max-width:800px;max-height:80vh;border:2px solid #fff;user-select: none;-webkit-user-select: none;-ms-user-select: none;}
 .full-img img.rectImg{max-width:550px;top:100px;}
 .full-img span{position:absolute;top:-20px;right:20px;font-size: 80px;font-weight: bold;color: #aaa;z-index:9999;cursor: pointer;}
 .full-img span:hover{color:#ee0cee;}
