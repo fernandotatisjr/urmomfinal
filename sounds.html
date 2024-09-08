@@ -76,6 +76,22 @@
     <script>
     document.querySelectorAll(".albCov img").forEach((e=>{e.addEventListener("mousemove",(t=>{const o=e.getBoundingClientRect(),n=t.clientX-o.left,r=t.clientY-o.top,a=o.width,d=-50*(r/o.height-.5),l=-50*(.5-n/a);e.style.transform=`rotateX(${d}deg) rotateY(${l}deg)`})),e.addEventListener("mouseleave",(()=>{e.style.transform="rotateX(0deg) rotateY(0deg)"}))}));
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const elements=document.querySelectorAll('.scroll-up');
+        function checkVisibility() {
+            const scrollPosition = window.scrollY || window.pageYOffset;
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+            let delay = 0;
+            if(viewportWidth<=1000){delay=0;}
+            elements.forEach(element => {const elementOffset=element.getBoundingClientRect().top;if(elementOffset<=viewportHeight-delay){element.classList.add('show-up');}});
+        }
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+        checkVisibility();
+        });
+    </script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
