@@ -134,7 +134,23 @@
                 photographerCredit.innerHTML = 'Photo by Unknown';
             }
         }
-</script> 
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const elements=document.querySelectorAll('.scroll-up');
+    function checkVisibility() {
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        let delay = 0;
+        if(viewportWidth<=1000){delay=0;}
+        elements.forEach(element => {const elementOffset=element.getBoundingClientRect().top;if(elementOffset<=viewportHeight-delay){element.classList.add('show-up');}});
+    }
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+    checkVisibility();
+    });
+</script>
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
