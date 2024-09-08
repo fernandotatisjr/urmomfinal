@@ -92,7 +92,7 @@ class specialFooter extends HTMLElement{
             const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
             let delay = 0;
             if(viewportWidth<=1000){delay=0;}
-            elements.forEach(element => {const elementOffset=element.getBoundingClientRect().top;if(elementOffset<=viewportHeight-delay){element.classList.add('show');}});
+            elements.forEach(element => {const elementOffset=element.getBoundingClientRect().top;if(elementOffset<=viewportHeight-delay){element.classList.add('show-up');}});
         }
         window.addEventListener('scroll', checkVisibility);
         window.addEventListener('resize', checkVisibility);
