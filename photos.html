@@ -142,7 +142,7 @@
         const scrollPosition = window.scrollY || window.pageYOffset;
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
         const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        let delay = 0;
+        let delay = 100;
         if(viewportWidth<=1000){delay=0;}
         elements.forEach(element => {const elementOffset=element.getBoundingClientRect().top;if(elementOffset<=viewportHeight-delay){element.classList.add('show-up');}});
     }
