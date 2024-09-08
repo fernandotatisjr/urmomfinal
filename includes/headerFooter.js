@@ -85,7 +85,7 @@ class specialFooter extends HTMLElement{
         </div>
         <script>
         document.addEventListener('DOMContentLoaded', function () {
-        const elements=document.querySelectorAll('.scroll-element');
+        const elements=document.querySelectorAll('.scroll-up');
         function checkVisibility() {
             const scrollPosition = window.scrollY || window.pageYOffset;
             const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
