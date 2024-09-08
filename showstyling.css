@@ -5,16 +5,13 @@ blockquote{quotes:none}
 blockquote:before,blockquote:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 *{margin:0;padding:0;font-family:myFont;box-sizing:border-box}
-body{margin:0;position:relative;font-family:myFont;width:100%;background:#000;letter-spacing:1px;}
+body{margin:0;position:relative;font-family:myFont;width:100%;background:#000;letter-spacing:1px;opacity:1!important;}
 h1{font-size:40px;letter-spacing:2px;text-align:center;font-weight:800;}
 h2{font-size:30px;text-align:center;font-weight:700;}
 p{font-size:24px;font-weight:500;}
 img{max-width:100%;height:auto}
 a{text-decoration:none}
 .scroll-up{transform:translateY(30%);transition:filter 0.2s ease-out, transform 0.6s ease-out, opacity 0.6s ease-out!important;opacity:0!important;}
-.td1{transition-delay:0.1s;}
-.td2{transition-delay:0.2s;}
-.td3{transition-delay:0.3s;}
 .show-up{transform:translateY(0)!important;opacity:1!important;}
 .bbtn{text-align:center}
 .bbtn a,#mailingForm button{padding:10px 20px;border:2px solid #ee0cee;color:#fff;transition:0.3s;text-transform:uppercase;letter-spacing:1px;font-weight:800;border-radius:10px;}
