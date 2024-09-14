@@ -1,0 +1,1 @@
+document.querySelectorAll('.cov').forEach(cov => {cov.addEventListener('click', () => {cov.classList.toggle('show-before');});});
