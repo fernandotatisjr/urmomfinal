@@ -2,22 +2,30 @@ const bbtn = document.querySelector('#past a');
 const upcoming = document.getElementById('ucs');
 const past = document.getElementById('ps');
 const head = document.getElementById('headerC');
+
+// Toggle between upcoming and past shows
 bbtn.addEventListener('click', function () {
     past.classList.toggle('show');
     if (past.classList.contains('show')) {
         upcoming.classList.remove('show');
         upcoming.style.display = 'none';
         past.style.display = 'flex';
-        head.innerHTML = 'Past Shows'
+        head.innerHTML = 'Past Shows';
         bbtn.innerHTML = 'Upcoming Shows';
+        currentPage = 1; // Reset to first page
+        setupPagination('#ps'); // Setup pagination for past shows
     } else {
         upcoming.classList.add('show');
         upcoming.style.display = 'flex';
         past.style.display = 'none';
-        head.innerHTML = 'Upcoming Shows'
+        head.innerHTML = 'Upcoming Shows';
         bbtn.innerHTML = 'Past Shows';
+        currentPage = 1; // Reset to first page
+        setupPagination('#ucs'); // Setup pagination for upcoming shows
     }
 });
+
+// Global variables for pagination
 const itemsPerPage = 5;
 let currentPage = 1;
 
@@ -63,8 +71,12 @@ function setupPagination(container) {
     const shows = document.querySelectorAll(`${container} .row`);
     const totalPages = Math.ceil(shows.length / itemsPerPage);
 
-    // Show the first page initially
-    showPage(container, currentPage);
+    // If there are fewer items than the itemsPerPage, ensure that only the correct amount shows up
+    if (shows.length > 0) {
+        showPage(container, currentPage); // Show the first page initially
+    } else {
+        document.getElementById('page-numbers').innerHTML = ''; // Remove pagination buttons if no shows exist
+    }
 }
 
 // Navigate to the previous page
@@ -81,6 +93,11 @@ function prevPage() {
 
 // Navigate to the next page
 function nextPage() {
+    const shows = past.classList.contains('show')
+        ? document.querySelectorAll('#ps .row')
+        : document.querySelectorAll('#ucs .row');
+    const totalPages = Math.ceil(shows.length / itemsPerPage);
+
     if (currentPage < totalPages) {
         currentPage++;
         if (past.classList.contains('show')) {
