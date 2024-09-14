@@ -319,6 +319,7 @@ body.privacy-policy #bodyWrapper li:first-of-type{margin:0 0 20px;}
 #mailingForm button:hover{cursor:pointer;}
 .optionalParent p a{color:#000;}
 .homeNav{width:25%;margin:-30px 0 0;display:flex;justify-content: center;}
+.homeNav.scroll-up{transform:translateY(0);}
 .homeNav img{width:150px;transition:0.3s;}
 .homeNav img:hover{transform:scale(1.1);}
 body.thank-you #bodyWrapper{padding:75px 0 500px;display:block;}
