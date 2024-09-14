@@ -20,12 +20,14 @@ bbtn.addEventListener('click', function () {
 });
 const itemsPerPage = 5;
 let currentPage = 1;
-const shows = document.querySelectorAll('#ucs .row, #ps .row'); // Select all your show rows
-const totalPages = Math.ceil(shows.length / itemsPerPage);
 
-function showPage(page) {
+// Function to show a specific page for a given container
+function showPage(container, page) {
+    const shows = document.querySelectorAll(`${container} .row`);
+    const totalPages = Math.ceil(shows.length / itemsPerPage);
+
     // Hide all the shows
-    shows.forEach((show, index) => {
+    shows.forEach((show) => {
         show.style.display = 'none';
     });
 
@@ -37,17 +39,18 @@ function showPage(page) {
     // Update the pagination buttons
     document.getElementById('prev-btn').disabled = (page === 1);
     document.getElementById('next-btn').disabled = (page === totalPages);
-    updatePageNumbers(page);
+    updatePageNumbers(container, page, totalPages);
 }
 
-function updatePageNumbers(page) {
+// Function to update the page numbers
+function updatePageNumbers(container, page, totalPages) {
     const pageNumbersDiv = document.getElementById('page-numbers');
     pageNumbersDiv.innerHTML = '';
 
     for (let i = 1; i <= totalPages; i++) {
         const pageBtn = document.createElement('button');
         pageBtn.textContent = i;
-        pageBtn.onclick = () => showPage(i);
+        pageBtn.onclick = () => showPage(container, i);
         if (i === page) {
             pageBtn.classList.add('active');
         }
@@ -55,19 +58,38 @@ function updatePageNumbers(page) {
     }
 }
 
+// Setup pagination for the given container (either #ucs or #ps)
+function setupPagination(container) {
+    const shows = document.querySelectorAll(`${container} .row`);
+    const totalPages = Math.ceil(shows.length / itemsPerPage);
+
+    // Show the first page initially
+    showPage(container, currentPage);
+}
+
+// Navigate to the previous page
 function prevPage() {
     if (currentPage > 1) {
         currentPage--;
-        showPage(currentPage);
+        if (past.classList.contains('show')) {
+            showPage('#ps', currentPage);
+        } else {
+            showPage('#ucs', currentPage);
+        }
     }
 }
 
+// Navigate to the next page
 function nextPage() {
     if (currentPage < totalPages) {
         currentPage++;
-        showPage(currentPage);
+        if (past.classList.contains('show')) {
+            showPage('#ps', currentPage);
+        } else {
+            showPage('#ucs', currentPage);
+        }
     }
 }
 
-// Initial setup
-showPage(currentPage);
+// Initial setup for upcoming shows
+setupPagination('#ucs');
