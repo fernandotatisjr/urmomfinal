@@ -281,7 +281,10 @@ body.photos #bodyWrapper li a:before{content:"";position:absolute;bottom:-5px;le
 body.photos #bodyWrapper li a:hover:before{transform: scaleX(1);}
 .reset.bbtn{margin:50px auto 0;display:none;opacity:0;transition:opacity 0.5s ease-in-out;}
 .img-gallery{width:90%;margin:100px auto 50px;display:grid;grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));grid-gap:50px;align-items:center;}
-.img-gallery img{width:90%;border:3px solid #fff;cursor:pointer;transition: all 0.2s ease-out;-webkit-transition:0.2s -webkit-filter ease-out;-moz-transition:0.2s -moz-filter ease-out;-moz-transition:0.2s filter ease-out;-ms-transition:0.2s -ms-filter ease-out;animation:fade linear both;animation-timeline:view();animation-range:entry 50% cover 50%;}
+.blur-load{width:90%;background-size:cover;background-position:cover;}
+.blur-load.loaded > img{opacity:1;}
+.blur-load > img{opacity:0;transition:opacity 200ms ease-in-out;}
+.img-gallery img{width:100%;object-position:center;object-fit:cover;border:3px solid #fff;cursor:pointer;transition: all 0.2s ease-out;-webkit-transition:0.2s -webkit-filter ease-out;-moz-transition:0.2s -moz-filter ease-out;-moz-transition:0.2s filter ease-out;-ms-transition:0.2s -ms-filter ease-out;animation:fade linear both;animation-timeline:view();animation-range:entry 50% cover 50%;}
 .img-gallery img:hover{/*transform: scale(0.8) rotate(-15deg);border:1px solid #fff;border-radius:20px;*/box-shadow:0 32px 75px rgba(68,77,136,0.2);filter:brightness(0.6);}
 .turmachine{display:grid;width:20%}
 .turmachine p{width:80%;color:#fff}

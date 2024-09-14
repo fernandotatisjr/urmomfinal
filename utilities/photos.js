@@ -1,3 +1,17 @@
+const blurDivs = document.querySelectorAll(".blur-div")
+blurDivs.forEach(div => {
+    const img = document.querySelector("img")
+    function  loaded(){
+        div.classList.add("loaded")
+    }
+
+    if (img.complete){
+        loaded()
+    } else {
+        img.addEventListener("load", loaded)
+    }
+})
+
 
 var fullImgBox = document.getElementById("fullImgBox");
 var fullImg = document.getElementById("fullImg");
