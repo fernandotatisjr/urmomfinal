@@ -7,6 +7,8 @@ document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
         iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
         iframe.setAttribute('allowfullscreen', true);
         iframe.setAttribute('loading', 'lazy');
+        const playButton = this.parentNode.querySelector('.play-button');
+        if (playButton) {playButton.remove();}
         this.parentNode.replaceChild(iframe, this);
     });
 });
