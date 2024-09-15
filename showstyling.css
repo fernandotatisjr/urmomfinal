@@ -97,12 +97,14 @@ body::-webkit-scrollbar-thumb{background:#ee0cee;}
 .video-container {width:100%;margin: 90px auto;display:flex;flex-direction:column;align-items:center;}
 .ytthumb{width:90%;margin:50px 0;display:flex;gap:15px;align-items:center;justify-content:center;transition:0.3s ease-in-out;animation:fade linear both;animation-timeline:view();animation-range:entry 50% cover 50%;}
 .ytthumb:hover{opacity:0.7;}
+.videoWrapper{position:relative;}
 .yttext{display:flex;justify-content:center;align-items:center;flex-direction:column;}
 .yttext img{width:400px;}
 .yttext h3 span{display:block;text-transform:uppercase;}
 .video-container .ytthumb .videoWrapper.scroll-element img.video-thumbnail{transition:opacity 0.2s ease-in-out;cursor:pointer;}
 .video-container .ytthumb .videoWrapper.scroll-element img.video-thumbnail:hover{opacity:0.6;}
 .video-container .ytthumb .videoWrapper.scroll-element img.video-thumbnail,.ytthumb iframe{width:1120px;height:630px;-webkit-box-shadow: 0px 0px 29px 7px rgba(240,231,28,1);-moz-box-shadow: 0px 0px 29px 7px rgba(240,231,28,1);box-shadow: 0px 0px 29px 7px rgba(240,231,28,1);}
+.play-button {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:80px;height:80px;background:url('images/play-button.png') no-repeat center;background-size:contain;cursor:pointer;}
 .ytthumb .thumbnail{box-shadow: var(--shadow-elevation-medium);transition:0.3s ease-in-out;border:1px solid #ee0cee;cursor: pointer;}
 .ytthumb .thumbnail:hover{transition:0.3s ease-in-out;opacity:0.7;}
 .ytthumb h3{text-align:center;font-size:36px;color:#fff;font-weight:900}
