@@ -18,3 +18,20 @@ bbtn.addEventListener('click', function () {
         bbtn.innerHTML = 'Past Shows';
     }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+    const upcomingShowsContainer = document.getElementById('ucs');
+    const pastShowsContainer = document.getElementById('ps');
+    function parseDate(dateString) {
+        const formattedDate = dateString.replace(/(\w+ \d+)( - \d{1,2}:\d{2}\w{2})?/, '$1, ' + new Date().getFullYear());
+        return new Date(Date.parse(formattedDate));
+    }
+    Array.from(upcomingShowsContainer.children).forEach(show => {
+        const dateElement = show.querySelector('.date');
+        const showDate = parseDate(dateElement.textContent.trim());
+
+        if (showDate < new Date()) {
+            pastShowsContainer.appendChild(show);
+        }
+    });
+});
