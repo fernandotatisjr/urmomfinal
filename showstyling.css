@@ -16,8 +16,8 @@ a{text-decoration:none}
 .bbtn{text-align:center}
 .bbtn a,#mailingForm button{padding:10px 20px;border:2px solid #ee0cee;color:#fff;transition:0.3s;text-transform:uppercase;letter-spacing:1px;font-weight:800;border-radius:10px;}
 .bbtn a:hover,#mailingForm button:hover{background:#ee0cee;color:#000;box-shadow:0 0 20px rgba(238, 12, 238, 0.5);}
-body.error h1,body.error h2{color:#ee0cee;text-align:left;}
-body.error p{color:#fff;text-align:left;}
+body.error h1,body.error h2{color:#ee0cee!important;text-align:left!important;}
+body.error p{color:#fff!important;text-align:left!important;}
 #siteWrapper,#footerWrapper{padding:0;background:#000;}
 #headerWrapperHome{width:100%;height:255px;padding:0;z-index:9998;display:flex;flex-direction:row;align-items: center;justify-content:space-around;background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(118,36,255,1) 100%);}
 #headerWrapperHome .hlogo {width:250px;z-index:9999;transition:0.5s;}
