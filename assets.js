@@ -9,25 +9,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
     elements.forEach(element => {observer.observe(element);});
   });
-function handleScroll() {
-  const header = document.getElementById("headerWrapperHome");
-  const content = document.getElementById("mainContent");
-  const headerHeight = header.offsetHeight;
-  const scrollThreshold = 100;
-
-  if (window.innerWidth <= 950) {
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add("fixed");
-      content.style.paddingTop = `${headerHeight}px`;
-    } else {
-      header.classList.remove("fixed");
-      content.style.paddingTop = "0px";
+  document.addEventListener("DOMContentLoaded", function() {
+    function handleScroll() {
+      const header = document.getElementById("headerWrapperHome");
+      const content = document.getElementById("mainContent");
+      const headerHeight = header ? header.offsetHeight : 0;
+      const scrollThreshold = 100;
+  
+      if (window.innerWidth <= 950) {
+        if (header && content) {
+          if (window.scrollY > scrollThreshold) {
+            header.classList.add("fixed");
+            content.style.paddingTop = `${headerHeight}px`;
+          } else {
+            header.classList.remove("fixed");
+            content.style.paddingTop = "0px";
+          }
+        }
+      } else {
+        if (header) {
+          header.classList.remove("fixed");
+        }
+        if (content) {
+          content.style.paddingTop = "0px";
+        }
+      }
     }
-  } else {
-    header.classList.remove("fixed");
-    content.style.paddingTop = "0px";
-  }
-}
-
-document.addEventListener("scroll", handleScroll);
+  
+    document.addEventListener("scroll", handleScroll);
+  });
   
