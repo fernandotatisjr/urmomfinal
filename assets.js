@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.forEach(element => {observer.observe(element);});
   });
   document.addEventListener("DOMContentLoaded", function() {
+    const header = document.getElementById("headerWrapperHome");
+    const content = document.getElementById("mainContent");
+    
     function handleScroll() {
-      const header = document.getElementById("headerWrapperHome");
-      const content = document.getElementById("mainContent");
-      const headerHeight = header ? header.offsetHeight : 0;
-      const scrollThreshold = 100;
-  
       if (window.innerWidth <= 950) {
+        const headerHeight = header ? header.offsetHeight : 0;
+        const scrollThreshold = 100;
+  
         if (header && content) {
           if (window.scrollY > scrollThreshold) {
             header.classList.add("fixed");
