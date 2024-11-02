@@ -9,15 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
     elements.forEach(element => {observer.observe(element);});
   });
-document.addEventListener("scroll", function() {
-  const header = document.getElementById("headerWrapperHome");
-  const scrollThreshold = 100; 
-  const isMobileDevice = window.innerWidth <= 768;
-  if (isMobileDevice) {
+  document.addEventListener("scroll", function() {
+    const header = document.getElementById("headerWrapperHome");
+    const headerHeight = header.offsetHeight;
+    const scrollThreshold = 100;
+    
     if (window.scrollY > scrollThreshold) {
       header.classList.add("fixed");
+      document.body.style.paddingTop = `${headerHeight}px`;
     } else {
       header.classList.remove("fixed");
+      document.body.style.paddingTop = "0px";
     }
-  }
-});  
+  });
+  
