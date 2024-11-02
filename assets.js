@@ -9,17 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
     elements.forEach(element => {observer.observe(element);});
   });
-  document.addEventListener("scroll", function() {
-    const header = document.getElementById("headerWrapperHome");
-    const headerHeight = header.offsetHeight;
-    const scrollThreshold = 100;
-    
+function handleScroll() {
+  const header = document.getElementById("headerWrapperHome");
+  const content = document.getElementById("mainContent");
+  const headerHeight = header.offsetHeight;
+  const scrollThreshold = 100;
+
+  if (window.innerWidth <= 950) {
     if (window.scrollY > scrollThreshold) {
       header.classList.add("fixed");
-      document.body.style.paddingTop = `${headerHeight}px`;
+      content.style.paddingTop = `${headerHeight}px`;
     } else {
       header.classList.remove("fixed");
-      document.body.style.paddingTop = "0px";
+      content.style.paddingTop = "0px";
     }
-  });
+  } else {
+    header.classList.remove("fixed");
+    content.style.paddingTop = "0px";
+  }
+}
+
+document.addEventListener("scroll", handleScroll);
   
