@@ -9,3 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
     elements.forEach(element => {observer.observe(element);});
   });
+document.addEventListener("scroll", function() {
+  const header = document.getElementById("headerWrapperHome");
+  const scrollThreshold = 100; 
+  const isMobileDevice = window.innerWidth <= 768;
+  if (isMobileDevice) {
+    if (window.scrollY > scrollThreshold) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  }
+});  
