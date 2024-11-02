@@ -560,7 +560,7 @@ body.privacy-policy #bodyWrapper{padding:50px 40px;}
 .mnavdesk a{font-size:18px;}
 h1{letter-spacing:1px;}
 #headerWrapperHome{height:100px;}
-body.home #headerWrapperHome{margin:0 0 40px;}
+/* body.home #headerWrapperHome{margin:0 0 40px;} */
 #headerWrapperHome .hlogo{width:95px;}
 .hamburger{width:27px;height:27px;}
 .hamburger .bar, .hamburger:after, .hamburger:before{height:3px;}
