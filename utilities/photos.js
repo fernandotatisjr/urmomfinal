@@ -6,7 +6,7 @@ var currentIndex = 0;
 var images = document.querySelectorAll(".img-gallery img");
 
 function openFullImg(pic, index, className) {
-    fullImgBox.style.display = "flex"; headerWrapper.style.zIndex = "-1"; headerWrapper.style.position = "relative";
+    fullImgBox.style.display = "flex"; headerWrapper.style.display = "none";
     fullImg.src = pic;
     currentIndex = index;
     setTimeout(() => { fullImgBox.classList.add("show"); }, 10);
@@ -14,7 +14,7 @@ function openFullImg(pic, index, className) {
 }
 function closeFullImg() {
     fullImgBox.classList.remove("show");
-    setTimeout(() => { fullImgBox.style.display = "none"; headerWrapper.style.zIndex = "9999"; headerWrapper.style.position = "relative"; }, 500);
+    setTimeout(() => { fullImgBox.style.display = "none"; headerWrapper.style.display = "block";}, 500);
 }
 function navigateImage(direction) {
     currentIndex += direction;
