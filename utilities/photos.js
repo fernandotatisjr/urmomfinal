@@ -14,7 +14,7 @@ function openFullImg(pic, index, className) {
 }
 function closeFullImg() {
     fullImgBox.classList.remove("show");
-    setTimeout(() => { fullImgBox.style.display = "none"; headerWrapper.style.zIndex = "9999"; headerWrapper.style.position = "unset"; }, 500);
+    setTimeout(() => { fullImgBox.style.display = "none"; headerWrapper.style.zIndex = "9999"; headerWrapper.style.position = "relative"; }, 500);
 }
 function navigateImage(direction) {
     currentIndex += direction;
