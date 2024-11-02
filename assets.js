@@ -11,37 +11,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById("headerWrapperHome");
-    const content = document.getElementById("mainContent");
   
     function handleScroll() {
-      if (window.innerWidth <= 950) {
-        const headerHeight = header ? header.offsetHeight : 0;
-        const scrollThreshold = 100;
-  
-        console.log("Current scroll position:", window.scrollY); // Log current scroll position
-        console.log("Header height:", headerHeight); // Log header height
-  
-        if (header && content) {
-          if (window.scrollY > scrollThreshold) {
-            console.log("Adding fixed class to header"); // Log action
-            header.classList.add("fixed");
-            content.style.paddingTop = `${headerHeight}px`;
-          } else {
-            console.log("Removing fixed class from header"); // Log action
-            header.classList.remove("fixed");
-            content.style.paddingTop = "0px";
-          }
+        if (window.innerWidth <= 950) {
+            const headerHeight = header ? header.offsetHeight : 0;
+            const scrollThreshold = 100;
+
+            if (header) {
+                if (window.scrollY > scrollThreshold) {
+                    header.classList.add("fixed");
+                    document.body.style.paddingTop = `${headerHeight}px`;
+                } else {
+                    header.classList.remove("fixed");
+                    document.body.style.paddingTop = "0px";
+                }
+            }
         } else {
-          console.log("Header or content not found"); // Log if elements are not found
+            if (header) {
+                header.classList.remove("fixed");
+                document.body.style.paddingTop = "0px";
+            }
         }
-      } else {
-        if (header) {
-          header.classList.remove("fixed");
-          content.style.paddingTop = "0px"; // Reset padding
-        }
-      }
     }
-  
+
     document.addEventListener("scroll", handleScroll);
-  });
-  
+});
