@@ -559,9 +559,10 @@ body.privacy-policy #bodyWrapper{padding:50px 40px;}
 .mob-nav img{width:150px;}
 .mnavdesk a{font-size:18px;}
 h1{letter-spacing:1px;}
-#headerWrapperHome{height:130px;}
+#headerWrapperHome{height:100px;}
 body.home #headerWrapperHome{margin:0 0 40px;}
-#headerWrapperHome .hlogo{width:125px;}
+#headerWrapperHome .hlogo{width:95px;}
+#headerWrapperHome.fixed .hlogo
 .hamburger{width:27px;height:27px;}
 .hamburger .bar, .hamburger:after, .hamburger:before{height:3px;}
 .hamburger.is-active:before{transform:rotate(-45deg) translate(-6px, 3px);}
