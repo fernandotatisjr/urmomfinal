@@ -40,6 +40,8 @@ function updatePhotographerCredit(className) {
         photographerCredit.innerHTML = 'Photo by Michael Tuffy';
     } else if (className.includes('per8')) {
         photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/reasephotography/" target="_blank">Madison Rease</a';
+    } else if (className.includes('per9')) {
+        photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/frontzakphotography/" target="_blank">Erik Frontzak</a'; 
     } else {
         photographerCredit.innerHTML = 'Photo by Unknown';
     }
