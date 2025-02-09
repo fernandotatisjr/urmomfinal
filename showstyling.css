@@ -308,12 +308,6 @@ body.photos #bodyWrapper li a:hover:before{transform: scaleX(1);}
 .full-img span{position:absolute;top:-20px;right:20px;font-size: 80px;font-weight: bold;color: #aaa;z-index:9999;cursor: pointer;}
 .full-img span:hover{color:#ee0cee;}
 .full-img .tur{width:100%;padding:15px;position:absolute;left:0;bottom:0;font-size:18px;font-weight:700;background:rgba(50,50,50,.1);color:#fff;text-align:center;}
-body.shop h1{color:#ee0cee;}
-#shopItems{display:grid;grid-template-columns:repeat(3,1fr);}
-#shopItems .item{box-sizing:border-box;background:rgb(56 54 54 / 80%);}
-#shopItems .item a img{width:100%;transition:300ms;}
-#shopItems .item a{transition:300ms;}
-#shopItems .item a:hover img{transform:scale(.96);filter:brightness(0.8);}
 @media (max-width:1362px){.img-gallery{grid-gap:30px;}}
 @media(max-width:753px){.img-gallery{justify-items:center;}.img-gallery img{width:75%;}}
 body.privacy-policy #bodyWrapper{padding:50px 100px;color:#fff;flex-direction:column;line-height:1.2}
