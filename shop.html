@@ -24,9 +24,9 @@
     <link rel="stylesheet" type="text/css" href="showstyling.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        body.shop h1{color:#ee0cee;}
+        body.shop h1{width:100%;color:#ee0cee;}
         #shopItems{display:grid;grid-template-columns:repeat(3,1fr);}
-        #shopItems .item{box-sizing:border-box;background:rgb(56 54 54 / 80%);}
+        #shopItems .item{box-sizing:border-box;background:rgba(56,54,54,0.6);}
         #shopItems .item a img{width:100%;transition:300ms;}
         #shopItems .item a{transition:300ms;}
         #shopItems .item a:hover img{transform:scale(.96);filter:brightness(0.8);}
@@ -36,28 +36,30 @@
     <div id="siteWrapper">
         <my-header></my-header>
         <div id="bodyWrapper">
-            <h1>Shop</h1>
-            <div id="shopItems">
-                <div class="item">
-                    <a href="#">
-                        <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
-                        <h3>Black Shirt</h3>
-                        <h4>$20</h4>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
-                        <h3>Tiedye Shirt</h3>
-                        <h4>$20</h4>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
-                        <h3>Sweatshirt</h3>
-                        <h4>$20</h4>
-                    </a>
+            <div class="container">
+                <h1>Shop</h1>
+                <div id="shopItems">
+                    <div class="item">
+                        <a href="#">
+                            <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
+                            <h3>Black Shirt</h3>
+                            <h4>$20</h4>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
+                            <h3>Tiedye Shirt</h3>
+                            <h4>$20</h4>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
+                            <h3>Sweatshirt</h3>
+                            <h4>$20</h4>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
