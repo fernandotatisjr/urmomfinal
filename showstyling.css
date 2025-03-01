@@ -351,7 +351,8 @@ body.videos h1{margin:0 auto 100px;text-align:center;font-size:60px;color:#ee0ce
 .vidi img:hover{opacity:0.5;}
 .vidi img.active{border:2px solid #ee0cee;opacity:0.5;}
 #headerWrapperHome.fixed{height:100px;}
-#headerWrapperHome.fixed .hlogo{height:100px;}
+#headerWrapperHome.fixed .hlogo{width:100px;height:100px;}
+#headerWrapperHome.fixed .hlogo img{width:100%;}
 #headerWrapperHome.fixed .navdesk a{font-size:14px;}
 @media(max-width:1600px){
 .epHome .cov{max-width:600px;max-height:600px;width:auto;}
