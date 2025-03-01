@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById("headerWrapperHome");
   
     function handleScroll() {
-        if (window.innerWidth <= 2000) {
+        if (window.innerWidth <= 950) {
             const headerHeight = header ? header.offsetHeight : 0;
             const scrollThreshold = 100;
 
