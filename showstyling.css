@@ -350,6 +350,9 @@ body.videos h1{margin:0 auto 100px;text-align:center;font-size:60px;color:#ee0ce
 .vidi img{cursor:pointer;width:190px;height:auto;transition:200ms;}
 .vidi img:hover{opacity:0.5;}
 .vidi img.active{border:2px solid #ee0cee;opacity:0.5;}
+#headerWrapperHome.fixed{height:100px;}
+#headerWrapperHome.fixed .hlogo{height:100px;}
+#headerWrapperHome.fixed .navdesk a{font-size:14px;}
 @media(max-width:1600px){
 .epHome .cov{max-width:600px;max-height:600px;width:auto;}
 .listen h3{font-size:40px;letter-spacing:1px;}
@@ -361,10 +364,7 @@ body.videos h1{margin:0 auto 100px;text-align:center;font-size:60px;color:#ee0ce
 @media(max-width:1400px){
 body.sounds #bodyWrapper{padding:50px 5%;}
 #headerWrapperHome{height:175px;}
-#headerWrapperHome.fixed{height:100px;}
 #headerWrapperHome .hlogo{width:180px;}
-#headerWrapperHome.fixed .hlogo{height:100px;}
-#headerWrapperHome.fixed .navdesk a{font-size:14px;}
 #soundCovers{margin:100px auto 50px;justify-content:space-around;}
 .lois img{width:150px;}
 .uman h1, .uman p{font-size:20px;}
