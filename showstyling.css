@@ -361,7 +361,10 @@ body.videos h1{margin:0 auto 100px;text-align:center;font-size:60px;color:#ee0ce
 @media(max-width:1400px){
 body.sounds #bodyWrapper{padding:50px 5%;}
 #headerWrapperHome{height:175px;}
+#headerWrapperHome.fixed{height:100px;}
 #headerWrapperHome .hlogo{width:180px;}
+#headerWrapperHome.fixed .hlogo{height:100px;}
+#headerWrapperHome.fixed .navdesk a{font-size:14px;}
 #soundCovers{margin:100px auto 50px;justify-content:space-around;}
 .lois img{width:150px;}
 .uman h1, .uman p{font-size:20px;}
