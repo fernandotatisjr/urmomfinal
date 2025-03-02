@@ -226,7 +226,6 @@ body.news h1{width:100%;margin: 0 0 50px;font-size: 60px;text-align:center;color
 .nitem .imgc p a{font-style:italic;color:#fc92ff;transition:200ms;}
 .nitem .imgc p a:hover{color:#ee0cee;}
 .nitem .imgc img{width:100%;border:5px solid #fff;}
-
 .nitem #valshalla.imgc{max-width:400px;}
 body.about #headerWrapperHome{width:100%;z-index:9999;}
 body.about #headerWrapperHome .hlogo {margin:0;z-index:9999;transition:0.5s;}
@@ -407,6 +406,7 @@ body.sounds #bodyWrapper{padding:50px 5%;}
 @media(max-width:1150px){
 .nitem{padding:0 0 20px;flex-direction:column;align-items:center;gap:25px;}
 .nicon{order:2;width:75%;}
+#valssubt.nicon{width:75%;}
 .nitem .imgc{order:1;}
 }
 @media(max-width:1100px){
@@ -523,7 +523,7 @@ body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapp
 .epHome, .covUman, #socialstream{gap:150px;}
 .epHome{padding:0;}
 #soundHeader h1, #soundHeader select{margin:0;}
-.nicon{width:100%;}
+.nicon,#valssubt.nicon{width:100%;}
 .bio p{font-size:20px;}
 .accomp{flex-direction:column;align-items:center;gap:50px}
 .bio2, .bio3{width:100%;}
