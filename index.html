@@ -89,6 +89,15 @@
             </div>
         </div>
         <my-footer></my-footer>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-box">
+                <button class="popup-close" onclick="closePopup()">✖</button>
+                <img src="images/sushi_single_cover.jpg" alt="Sushi (With Your Ex) Cover" class="popup-image">
+                <h3>Our Next Single "Sushi (With Your Ex)"</h3>
+                <p>is out out March 18th</p>
+                <a href="https://nfan.link/sushi" class="popup-button" target="_blank">Presave It Now</a>
+            </div>
+        </div>
 <script src="includes/headerFooter.js"></script>
 <script src="assets.js"></script>
 <script src="utilities/home.js"></script>  
@@ -105,6 +114,13 @@
         "https://www.youtube.com/@weareurmom"
       ]
     }
+    </script>
+    <script>
+        window.onload = function() {document.getElementById("popup").classList.add("show");};
+        function closePopup() {document.getElementById("popup").classList.remove("show");}
+        document.getElementById("popup").addEventListener("click", function(event) {
+            if (event.target === this) {closePopup();}
+        });
     </script>
 </body>
 </html>
