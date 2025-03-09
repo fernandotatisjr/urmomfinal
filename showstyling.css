@@ -632,6 +632,7 @@ h1{font-size:36px!important;}
 .mlisten h3{font-size:16px;font-weight:700;}
 #nextPhoto{width:95%;}
 #mc_embed_signup{width:100%;}
+.popup-image{width:75%;}
 }
 @media(max-width:480px){
 #bodyWrapper{padding:50px 2%;}
