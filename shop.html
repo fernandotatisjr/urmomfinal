@@ -25,16 +25,28 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         body.shop #bodyWrapper{justify-content:center;}
-        body.shop h1{width:100%;margin-bottom:50px;color:#ee0cee;}
-        #shopItems{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;}
+        body.shop h1{width:100%;margin-bottom:50px;color:#ee0cee;text-align:center!important;}
+        #shopItems{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
         #shopItems .item{box-sizing:border-box;}
         #shopItems .item a{padding:25px;box-sizing:border-box;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
         #shopItems .item a img{max-width:70%;height:auto;display:block;object-fit:contain;transition:300ms;}
         #shopItems .item a{transition:300ms;}
         #shopItems .item a:hover img{transform:scale(1.05);filter:brightness(1.1);}
-        #shopItems .item h3{color:#fff;}
-        #shopItems .item h4{color:#ee0cee;}
-        @media(max-width:500px){#shopItems{grid-template-columns:repeat(1,1fr);gap:30px;}#shopItems .item a img{max-width:90%;}}
+        #shopItems .item h3,body.shop .modal-content h3{color:#fff;}
+        #shopItems .item h4,body.shop .modal-content h4{color:#ee0cee;}
+        #shopItems .item h3{margin-top:20px;}
+        body.shop .modal{position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.95);display:flex;align-items:center;justify-content:center;}
+        body.shop .modal-content{padding:2em;border-radius:12px;background:#111;color:#fff;width:100%;max-width:800px;text-align:center;position:relative;display:flex;flex-direction:column;align-items:center;}
+        body.shop .modal-content img{max-height:400px;width:auto;border-radius:8px;margin-bottom:1em;}
+        body.shop .close{position:absolute;top:15px;right:20px;font-size:2em;cursor:pointer;}
+        .modal-buttons{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:1em;}
+        .shirt-images{position:relative;width:100%;max-height:80vh;display:flex;justify-content:center;align-items:center;overflow:hidden;}
+        .shirt-images img{max-height:80vh;width:auto;object-fit:contain;}
+        body.shop .modal-content h3,body.shop .modal-content h4{font-size:14px;}
+        #flipBtn{position:absolute;top:1rem;left:1rem;background:rgba(255,255,255,0.9);color:#111;border:none;padding:0.5em 0.75em;font-weight:bold;border-radius:4px;cursor:pointer;z-index:10;box-shadow:0 0 5px rgba(0,0,0,0.2);transition:background 0.2s;}
+        #flipBtn:hover{background:#fff;}
+        body.shop .modal-content .bbtn a{display:block;width:50%;padding:6px;color:#fff;text-align:center;text-decoration:none;font-weight:bold;border-radius:4px;transition:background 0.3s;margin-left:auto;margin-right:auto;}
+        @media(max-width:500px){#shopItems{grid-template-columns:repeat(1,1fr);gap:30px;}#shopItems .item a img{max-width:70%;}}
     </style>
 </head>
 <body class="shop">
@@ -42,49 +54,123 @@
         <my-header></my-header>
         <div id="bodyWrapper">
             <div class="container">
-                <h1>Shop</h1>
-                <div id="shopItems">
-                    <div class="item">
-                        <a href="https://weareurmom.square.site/product/black-t-shirt/1" target="_blank">
-                            <img src="/images/merch/black-shirt-t.png" alt="Ur Mom Black Shirt">
+                <div id="soundHeader">
+                    <h1>Ur Mom's Shop</h1>
+                    <select name="Filter" id="filterDropdown">
+                        <option value="" disabled selected hidden>Choose type...</option>
+                        <option value="reset">All</option>
+                        <option value="vinyl">Vinyl</option>
+                        <option value="shirt">Shirts</option>
+                    </select>
+                </div>
+                <div id="shopItems" class="shop-grid">
+                    <div class="item" data-type="vinyl">
+                        <a href="#" 
+                           onclick="openShirtModal(this); return false;" 
+                           data-front="images/s4s-album-cover-front.jpg"
+                           data-back="images/s4s-album-cover-back.jpg"
+                           data-title="'Shrinks for Suburbanites' Vinyl Pre-Order"
+                           data-price="$40"
+                           data-buy="https://square.link/u/kndKWVG6">
+                            <img src="images/s4s-album-cover-front.jpg" alt="Shrinks for Suburbanites Cover">
+                            <h3>'Shrinks for Suburbanites' Vinyl <br>Pre-Order</h3>
+                            <h4>$40</h4>
+                        </a>
+                    </div>
+                    <div class="item" data-type="shirt">
+                        <a href="#"
+                           onclick="openShirtModal(this); return false;"
+                           data-front="images/lava-lamp-front-t.png"
+                           data-back="images/lava-lamp-back-t.png"
+                           data-title="Lava Lamp Shirt"
+                           data-price="$30"
+                           data-buy="https://square.link/u/Wk3CtIB8">
+                            <img src="images/lava-lamp-back-t.png" alt="Lava Lamp Shirt">
+                            <h3>Lava Lamp Shirt</h3>
+                            <h4>$30</h4>
+                        </a>
+                    </div>
+                    <div class="item" data-type="shirt">
+                        <a href="#"
+                           onclick="openShirtModal(this); return false;"
+                           data-front="images/black-shirt-t.png"
+                           data-title="Black Shirt"
+                           data-price="$25"
+                           data-buy="https://square.link/u/2YxYcAWJ">
+                            <img src="images/black-shirt-t.png" alt="Ur Mom Black Shirt">
                             <h3>Black Shirt</h3>
                             <h4>$25</h4>
                         </a>
                     </div>
-                    <div class="item">
-                        <a href="https://weareurmom.square.site/product/tie-dye/6" target="_blank">
-                            <img src="/images/merch/tiedye-shirt-1-t.png" alt="Ur Mom Tiedye Shirt">
+    
+                    <div class="item" data-type="shirt">
+                        <a href="#" 
+                           onclick="openShirtModal(this); return false;" 
+                           data-front="images/tiedye-shirt-1-t.png"
+                           data-title="Tiedye Shirt"
+                           data-price="$25"
+                           data-buy="https://square.link/u/2YxYcAWJ">
+                            <img src="images/tiedye-shirt-1-t.png" alt="Ur Mom Tiedye Shirt">
                             <h3>Tiedye Shirt</h3>
-                            <h4>$30</h4>
+                            <h4>$25</h4>
                         </a>
                     </div>
-                    <!-- <div class="item">
-                        <a href="https://weareurmom.square.site/product/black-sweatshirts/7" target="_blank">
-                            <img src="/images/shirt-placeholder.png" alt="Shirt Placeholder">
-                            <h3>Sweatshirt</h3>
-                            <h4>$20</h4>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>
-        <my-footer></my-footer>
     </div>
-    <script src="includes/headerFooter.js"></script>
-    <script src="assets.js"></script>
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "MusicGroup",
-          "name": "Ur Mom",
-          "url": "https://weareurmom.com",
-          "logo": "https://weareurmom.com/images/yeller.png",
-          "sameAs": [
-            "https://www.facebook.com/weareurmom",
-            "https://www.instagram.com/weareurmom",
-            "https://www.youtube.com/@weareurmom"
-          ]
+    <div class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeShirtModal()">&times;</span>
+            <img id="shirtImage" src="" alt="Shirt Image">
+            <div class="shirt-info">
+                <h3 id="shirtTitle"></h3>
+                <h4 id="shirtPrice"></h4>
+            </div>
+            <div class="modal-buttons">
+                <button id="flipBtn" onclick="flipShirt()" style="display:none;">Flip</button>
+                <div class="bbtn">
+                    <a id="buyLink" href="#" target="_blank">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let isFlipped = false;
+        let frontSrc = '';
+        let backSrc = '';
+    
+        function openShirtModal(el) {
+            const modal = document.querySelector('.modal');const shirtImage = document.getElementById('shirtImage');const flipBtn = document.getElementById('flipBtn');const shirtTitle = document.getElementById('shirtTitle');const shirtPrice = document.getElementById('shirtPrice');const buyLink = document.getElementById('buyLink');
+    
+            frontSrc = el.dataset.front;backSrc = el.dataset.back;isFlipped = false;
+    
+            shirtImage.src = frontSrc;
+            shirtTitle.textContent = el.dataset.title || '';
+            shirtPrice.textContent = el.dataset.price || '';
+            buyLink.href = el.dataset.buy || '#';
+    
+            if (backSrc) {flipBtn.style.display = 'inline-block';} 
+            else {flipBtn.style.display = 'none';}
+            modal.style.display = 'flex';document.body.classList.add('shop');
         }
-        </script>
+        function flipShirt() { isFlipped = !isFlipped; const shirtImage = document.getElementById('shirtImage'); shirtImage.src = isFlipped ? backSrc : frontSrc; }
+
+        function closeShirtModal() { document.querySelector('.modal').style.display = 'none'; document.body.classList.remove('shop'); }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterDropdown = document.getElementById('filterDropdown');
+            
+            filterDropdown.addEventListener('change', function() {
+                const selectedValue = this.value;
+                const items = document.querySelectorAll('.item');
+                
+                items.forEach(item => {
+                    if (selectedValue === 'reset' || item.dataset.type === selectedValue) {item.style.display = 'block';} 
+                    else { item.style.display = 'none'; }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
