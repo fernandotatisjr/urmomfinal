@@ -1,6 +1,7 @@
 html{-webkit-text-size-adjust:100%}
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,img,strong,b,u,i,ol,ul,li,fieldset,form,label,table,tbody,tr,th,td,embed,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
-@font-face{font-family:myFont;src:url(kawoszeh.ttf);font-display:swap;}
+@font-face{font-family:myFont;src:url(LinLibertine.ttf);font-display:swap;}
+
 blockquote{quotes:none}
 blockquote:before,blockquote:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
