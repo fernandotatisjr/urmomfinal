@@ -446,6 +446,7 @@ body.sounds #bodyWrapper{padding:50px 5%;}
 .uman h1, .uman p{font-size:18px;}
 }
 @media(max-width:1000px){
+  #headerWrapperHome .navdesk a{padding:12px;}
 .mob-nav img{width:300px;}
 .navdesk a {font-size: 26px;padding: 24px 32px;border-radius:30px;}
 #headerWrapperHome .hlogo:hover{opacity:0.5;}
@@ -464,7 +465,7 @@ body.sounds #bodyWrapper{padding:50px 5%;}
 .hamburger {display: block;z-index:10000}
 .mob-nav {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100vh;background-color:#000;z-index: 9999;}
 .mob-nav.is-active {display:flex;flex-direction: column;align-items: center;overflow: hidden;height:100vh;}
-.mob-nav img{width:200px;}
+.mob-nav img{width:150px;}
 body.about #headerWrapperHome .mnavdesk a:nth-of-type(1),body.shows #headerWrapperHome .mnavdesk a:nth-of-type(2),body.sounds #headerWrapperHome .mnavdesk a:nth-of-type(3),body.ep #headerWrapperHome .mnavdesk a:nth-of-type(3),body.news #headerWrapperHome .mnavdesk a:nth-of-type(4),body.photos #headerWrapperHome .mnavdesk a:nth-of-type(5),body.videos #headerWrapperHome .mnavdesk a:nth-of-type(6){background:#ee0cee;color:#000;}
 .msocialLink{display:flex;flex-direction: row;margin:0;position:relative;bottom:-30px;}
 .msocialLink svg{height:30px;flex: 1;fill: #fff;transition: 0.2s;}
@@ -575,8 +576,8 @@ body.privacy-policy #bodyWrapper{padding:50px 40px;}
 .full-img span{top:0;font-size:60px;}
 .full-img img{margin:40px 0 0;}
 .full-img .tur{padding:5px 0;position:relative;background:none;}
-.mob-nav img{width:150px;}
-.mnavdesk a{font-size:18px;}
+.mob-nav img{width:100px;}
+.mnavdesk a{font-size:14px;margin-bottom:12px!important;}
 h1{letter-spacing:1px;}
 #headerWrapperHome{height:100px;}
 /* body.home #headerWrapperHome{margin:0 0 40px;} */
@@ -605,7 +606,7 @@ h1{letter-spacing:1px;}
 @media(max-width:560px){#nextPhoto{width:93%;}#nextPhoto svg{width:30px;height:30px;padding:4px;}}
 @media(max-width:550px){
 .epHome, .covUman, #socialstream{gap:50px;}
-.mob-nav img{width:175px;}
+.mob-nav img{width:125px;}
 .navdesk a{font-size:18px;padding:12px 16px;}
 .epHome,.covUman{text-align:center;}
 .epHome .cov{width:90%;display:block;}
@@ -638,7 +639,7 @@ h1{font-size:36px!important;}
 @media(max-width:480px){
 #bodyWrapper{padding:50px 2%;}
 #headerWrapperHome .navdesk .mi,#headerWrapperHome .navdesk .vertLine{font-size:16px}
-.mob-nav img{width:130px;}
+.mob-nav img{width:100px;}
 #showContainer .row{/*height:250px;*/gap:10px;}
 .showCell-venue p{font-size:16px;}
 .showCell-btn .bbtn a{font-size:14px;letter-spacing: 0px;}
