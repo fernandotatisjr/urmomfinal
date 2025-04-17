@@ -30,7 +30,7 @@ body.error p{color:#fff!important;text-align:left!important;}
 #headerWrapperHome .navdesk{text-align: center;position:relative;z-index:9999;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content: flex-end;gap:10px;}
 .navdesk .headlogo{width:50%;float:left;margin:-15px 0 -15px -275px}
 .headlogo img{height:60px;}
-#headerWrapperHome .navdesk a{padding:15px;border-radius:25px;font-size:20px;background:#1a1914;color:#fff;transition:0.2s;}
+#headerWrapperHome .navdesk a{padding:15px;border-radius:25px;font-size:18px;background:#1a1914;color:#fff;transition:0.2s;}
 #headerWrapperHome .navdesk a:hover{background:#ee0cee;color:#000;transform: scale(1.05);}
 body.about #headerWrapperHome .navdesk a:nth-of-type(1),body.shows #headerWrapperHome .navdesk a:nth-of-type(2),body.sounds #headerWrapperHome .navdesk a:nth-of-type(3),body.ep #headerWrapperHome .navdesk a:nth-of-type(3),body.news #headerWrapperHome .navdesk a:nth-of-type(4),body.photos #headerWrapperHome .navdesk a:nth-of-type(5),body.videos #headerWrapperHome .navdesk a:nth-of-type(6){background:#ee0cee;color:#000;}
 .hamburger{display:none;margin:0 20px 0 0;width:35px;height:35px;cursor:pointer;background:none;appearance:none;outline:none;border:none;}
